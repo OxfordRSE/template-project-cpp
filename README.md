@@ -15,13 +15,20 @@ We have tried to conform to common software engineering 'best practices', and to
 - C++14
 - [CMake](https://cmake.org/) build script for cross-platform configuration (see 
   [CMakeLists.txt](#cmakeliststxt))
-- [Catch](https://github.com/catchorg/Catch2) unit testing framework
-- [Travis](https://travis-ci.org/) integration for automated testing on Linux and macOS
-- [AppVeyor](https://www.appveyor.com/) integration for automated testing on Windows
-- [Codecov](https://codecov.io/) integration for automated coverage testing
-- [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for automated source code formatting
-- [Clang-Tidy](http://clang.llvm.org/extra/clang-tidy/) for static analysis to catch coding errors
-- [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) for catching memory-related issues
+- [Catch](https://github.com/catchorg/Catch2) unit testing framework (see 
+  [MyTests.cpp](#mytestscpp))
+- [Travis](https://travis-ci.org/) integration for automated testing on Linux 
+  and macOS (see [.travis.yml](#travisyml))
+- [AppVeyor](https://www.appveyor.com/) integration for automated testing on 
+  Windows (see [appveyor.yml](appveyoryml))
+- [Codecov](https://codecov.io/) integration for automated coverage testing (see 
+  [codecov](#codecov))
+- [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for automated 
+  source code formatting (see [.clang-format](#clangformat))
+- [Clang-Tidy](http://clang.llvm.org/extra/clang-tidy/) for static analysis to 
+  catch coding errors (see [.clang-tidy](#clangtidy))
+- [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) for 
+  catching memory-related issues (see [AddressSanitizer](#addresssanitizer))
 
 
 In addition, the project is set up to use the [boost libraries](https://www.boost.org/), and we will hopefully add other common libraries to the configuration soon.
