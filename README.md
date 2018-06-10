@@ -31,8 +31,17 @@ In addition, the project is set up to use the [boost libraries](https://www.boos
 We strongly recommend that you use `git` to keep your copy of this project under version control.
 
 Feel free to:
-- [Fork this repository](https://github.com/OxfordRSE/template-project-cpp#fork-destination-box), or
-- [Download a zip](https://github.com/OxfordRSE/template-project-cpp/archive/master.zip), and then initialise it as a git repository
+- [Duplicate this 
+  repository](https://help.github.com/articles/duplicating-a-repository), or
+- [Download a 
+  zip](https://github.com/OxfordRSE/template-project-cpp/archive/master.zip), 
+  and then initialise it as a git repository
+
+Note: if you just [Fork this 
+repository](https://github.com/OxfordRSE/template-project-cpp#fork-destination-box) 
+then it will *not* be independent of the original repo (i.e. no separate GitHub 
+issues)
+
 
 ## Where does it run?
 
@@ -161,9 +170,44 @@ throws the appropriate exceptions on invalid input.
 
 ### .travis.yml
 
+This template uses [Travis CI](https://docs.travis-ci.com/) for automated 
+testing. This is fully defined in the `.travis.yml` file and includes:
+
+- A matrix of build configurations: 
+    - MacOS X with XCode 9.3 
+    - Ubuntu 14.04 with GCC 5,6,7 & Clang 4,5
+- Test coverage data collection with 
+  [lcov](http://ltp.sourceforge.net/coverage/lcov.php) and reporting with 
+  [codecov](https://codecov.io/) 
+
+The results of the automated testing are reported on the [Travis CI project 
+page](https://travis-ci.org/OxfordRSE/template-project-cpp)
+  
 ### appveyor.yml
 
+For windows testing we use [AppVeyor](https://www.appveyor.com/), testing with 
+just a single windows configuration:
+    - Visual Studio 2017 with boost v1.64
+
 ### codecov
+
+Code coverage allow you to see how much of your code is actually covered by your 
+test suite. That is, which lines of code are actually run during the tests. 
+
+To do this, the code must be compiled with compiler flags that allow the 
+executable to collect information about which lines of code are called during 
+execution. For GCC or Clang this means adding the `--coverage` flag, which is 
+done in the 
+[`CMakeLists.txt`](https://github.com/OxfordRSE/template-project-cpp/blob/master/CMakeLists.txt) 
+configuration file.
+
+You can see the 
+[`.travis.yml'](https://github.com/OxfordRSE/template-project-cpp/blob/master/.travis.yml) 
+for an example of how to collect the coverage data in a readable format using 
+[lcov](http://ltp.sourceforge.net/coverage/lcov.php) (see the "after_success:" 
+section). This data is then sent to 
+[codecov](https://codecov.io/gh/OxfordRSE/template-project-cpp) for an even 
+easier-to-read web interface.
 
 ### .clang-format
 
