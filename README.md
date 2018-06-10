@@ -13,14 +13,14 @@ This repository is a template to help get you set up quickly when starting a new
 We have tried to conform to common software engineering 'best practices', and to that end this repository features the following:
 
 - C++14
-- [CMake](https://cmake.org/) build script for cross-platform configuration
-- [Catch](https://github.com/catchorg/Catch2) unit testing framework
-- [Travis](https://travis-ci.org/) integration for automated testing on Linux and macOS
-- [AppVeyor](https://www.appveyor.com/) integration for automated testing on Windows
-- [Codecov](https://codecov.io/) integration for automated coverage testing
-- [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for automated source code formatting
-- [Clang-Tidy](http://clang.llvm.org/extra/clang-tidy/) for static analysis to catch coding errors
-- [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) for catching memory-related issues
+- [CMake](cmakelists.txt) build script for cross-platform configuration
+- [Catch](mytests.cpp) unit testing framework
+- [Travis](.travis.yml) integration for automated testing on Linux and macOS
+- [AppVeyor](appveyor.yml) integration for automated testing on Windows
+- [Codecov](codecov) integration for automated coverage testing
+- [ClangFormat](.clang-format) for automated source code formatting
+- [Clang-Tidy](.clang-tidy) for static analysis to catch coding errors
+- [AddressSanitizer](AddressSanitizer) for catching memory-related issues
 
 
 In addition, the project is set up to use the [boost libraries](https://www.boost.org/), and we will hopefully add other common libraries to the configuration soon.
@@ -168,6 +168,24 @@ throws the appropriate exceptions on invalid input.
   easily do this by using the `add_executable` CMake function (in 
   `CMakeLists.txt`), exactly like we have done for `MyTests.cpp`
 
+### CMakeTests.txt
+
+[CMake](https://cmake.org/) is a cross-platform build configuration tool, which 
+generates compilation scripts (e.g. using `Makefiles` in linux, or Visual Studio 
+projects for windows) that you can run to compile your C++ project.
+
+Edit the 
+[CMakeTests.txt](https://github.com/OxfordRSE/template-project-cpp/blob/master/CMakeLists.txt) 
+configuration file to do things like:
+    - setup the overall structure of your project, creating libraries and 
+      executables and specifying the dependencies between these.
+    - setup the flags you wish to pass to the compiler
+    - search for any libraries on the current system, and link/include them in 
+      your project
+    - setup testing using 
+      [ctest](https://cmake.org/cmake/help/latest/module/CTest.html)
+    - setup how to install your project on the current system
+
 ### .travis.yml
 
 This template uses [Travis CI](https://docs.travis-ci.com/) for automated 
@@ -187,7 +205,8 @@ page](https://travis-ci.org/OxfordRSE/template-project-cpp)
 
 For windows testing we use [AppVeyor](https://www.appveyor.com/), testing with 
 just a single windows configuration:
-    - Visual Studio 2017 with boost v1.64
+
+- Visual Studio 2017 with boost v1.64
 
 ### codecov
 
@@ -235,12 +254,18 @@ place.
 
 ### .clang-tidy
 
-[Clang Tidy](http://clang.llvm.org/extra/clang-tidy/) is a clang-based linter 
-tool. A *linter* will analyzing your code to check for common programming bugs 
-and stylistic errors. This might seem similar to the warnings often given by the 
-compiler, but a linter will have a much more comprehensive set of tests that 
-examines the *structure* of your code rather than the often line-by-line 
+[Clang Tidy](http://clang.llvm.org/extra/clang-tidy/) is a clang-based C++ 
+linter tool. A *linter* will analyzing your code to check for common programming 
+bugs and stylistic errors. This might seem similar to the warnings often given 
+by the compiler, but a linter will have a much more comprehensive set of tests 
+that examines the *structure* of your code rather than the often line-by-line 
 checking done by the compiler.  
+
+You can install Clang Tidy on Ubuntu using `apt`:
+
+```bash
+$ sudo apt install clang-tidy
+```
 
 The 
 [.clang-tidy](https://github.com/OxfordRSE/template-project-cpp/blob/master/.clang-tidy) 
