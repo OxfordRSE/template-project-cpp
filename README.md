@@ -169,7 +169,7 @@ throws the appropriate exceptions on invalid input.
   easily do this by using the `add_executable` CMake function (in 
   `CMakeLists.txt`), exactly like we have done for `MyTests.cpp`
 
-### CMakeTests.txt
+### CMakeLists.txt
 
 [CMake](https://cmake.org/) is a cross-platform build configuration tool, which 
 generates compilation scripts (e.g. using `Makefiles` in linux, or Visual Studio 
