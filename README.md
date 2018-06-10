@@ -20,13 +20,13 @@ We have tried to conform to common software engineering 'best practices', and to
 - [Travis](https://travis-ci.org/) integration for automated testing on Linux 
   and macOS (see [here](#travisyml))
 - [AppVeyor](https://www.appveyor.com/) integration for automated testing on 
-  Windows (see [here](appveyoryml))
+  Windows (see [here](#appveyoryml))
 - [Codecov](https://codecov.io/) integration for automated coverage testing (see 
   [here](#codecov))
 - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for automated 
-  source code formatting (see [here](#clangformat))
+  source code formatting (see [here](#clang-format))
 - [Clang-Tidy](http://clang.llvm.org/extra/clang-tidy/) for static analysis to 
-  catch coding errors (see [here](#clangtidy))
+  catch coding errors (see [here](#clang-tidy))
 - [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) for 
   catching memory-related issues (see [here](#addresssanitizer))
 
