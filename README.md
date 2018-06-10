@@ -14,7 +14,7 @@ We have tried to conform to common software engineering 'best practices', and to
 
 - C++14
 - [CMake](https://cmake.org/) build script for cross-platform configuration (see 
-  [CMakeLists.txt](cmakeliststxt))
+  [CMakeLists.txt](#cmakeliststxt))
 - [Catch](https://github.com/catchorg/Catch2) unit testing framework
 - [Travis](https://travis-ci.org/) integration for automated testing on Linux and macOS
 - [AppVeyor](https://www.appveyor.com/) integration for automated testing on Windows
