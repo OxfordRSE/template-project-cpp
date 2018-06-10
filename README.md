@@ -202,7 +202,7 @@ done in the
 configuration file.
 
 You can see the 
-[`.travis.yml'](https://github.com/OxfordRSE/template-project-cpp/blob/master/.travis.yml) 
+[.travis.yml](https://github.com/OxfordRSE/template-project-cpp/blob/master/.travis.yml) 
 for an example of how to collect the coverage data in a readable format using 
 [lcov](http://ltp.sourceforge.net/coverage/lcov.php) (see the "after_success:" 
 section). This data is then sent to 
@@ -210,6 +210,28 @@ section). This data is then sent to
 easier-to-read web interface.
 
 ### .clang-format
+
+[Clang Format](https://clang.llvm.org/docs/ClangFormat.html) is a tool to 
+automatically format your code according to a set style configuration. This is 
+an incredibly useful tool because it frees you up from having to worry about 
+things like indenting, spacing out your code or breaking long lines of code, 
+just type in your code and let Clang Format clean it up for you.
+
+You can install Clang Format on Ubuntu using `apt`:
+
+```bash
+$ sudo apt install clang-format
+```
+
+You can set the particular style you wish to apply using the 
+[.clang-format](https://github.com/OxfordRSE/template-project-cpp/blob/master/.clang-format) 
+configuration file. The [clang-format 
+configurator](https://zed0.co.uk/clang-format-configurator/) is a useful web app 
+for generating this file.
+
+Note that most IDEs will allow you to automatically run Clang Format when the 
+file is saved, which even saves you from manually running the tool in the first 
+place.
 
 ### .clang-tidy
 
