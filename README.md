@@ -13,14 +13,15 @@ This repository is a template to help get you set up quickly when starting a new
 We have tried to conform to common software engineering 'best practices', and to that end this repository features the following:
 
 - C++14
-- [CMake](cmakelists.txt) build script for cross-platform configuration
-- [Catch](mytests.cpp) unit testing framework
-- [Travis](.travis.yml) integration for automated testing on Linux and macOS
-- [AppVeyor](appveyor.yml) integration for automated testing on Windows
-- [Codecov](codecov) integration for automated coverage testing
-- [ClangFormat](.clang-format) for automated source code formatting
-- [Clang-Tidy](.clang-tidy) for static analysis to catch coding errors
-- [AddressSanitizer](AddressSanitizer) for catching memory-related issues
+- [CMake](https://cmake.org/) build script for cross-platform configuration (see 
+  [CMakeLists.txt](cmakeliststxt))
+- [Catch](https://github.com/catchorg/Catch2) unit testing framework
+- [Travis](https://travis-ci.org/) integration for automated testing on Linux and macOS
+- [AppVeyor](https://www.appveyor.com/) integration for automated testing on Windows
+- [Codecov](https://codecov.io/) integration for automated coverage testing
+- [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) for automated source code formatting
+- [Clang-Tidy](http://clang.llvm.org/extra/clang-tidy/) for static analysis to catch coding errors
+- [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) for catching memory-related issues
 
 
 In addition, the project is set up to use the [boost libraries](https://www.boost.org/), and we will hopefully add other common libraries to the configuration soon.
