@@ -213,9 +213,9 @@ easier-to-read web interface.
 
 [Clang Format](https://clang.llvm.org/docs/ClangFormat.html) is a tool to 
 automatically format your code according to a set style configuration. This is 
-an incredibly useful tool because it frees you up from having to worry about 
-things like indenting, spacing out your code or breaking long lines of code, 
-just type in your code and let Clang Format clean it up for you.
+incredibly useful because it frees you up from having to worry about things like 
+indenting, spacing out your code or breaking long lines of code, just type in 
+your code and let Clang Format clean it up for you.
 
 You can install Clang Format on Ubuntu using `apt`:
 
@@ -234,6 +234,20 @@ file is saved, which even saves you from manually running the tool in the first
 place.
 
 ### .clang-tidy
+
+[Clang Tidy](http://clang.llvm.org/extra/clang-tidy/) is a clang-based linter 
+tool. A *linter* will analyzing your code to check for common programming bugs 
+and stylistic errors. This might seem similar to the warnings often given by the 
+compiler, but a linter will have a much more comprehensive set of tests that 
+examines the *structure* of your code rather than the often line-by-line 
+checking done by the compiler.  
+
+The 
+[.clang-tidy](https://github.com/OxfordRSE/template-project-cpp/blob/master/.clang-tidy) 
+configuration file allows you to set or turn off individual or sets of checks 
+done by clang-tidy. We also setup the 
+[CMakeLists.txt](https://github.com/OxfordRSE/template-project-cpp/blob/master/CMakeLists.txt) 
+file so that clang-tidy is run automatically during compile-time.
 
 ### AddressSanitizer
 
