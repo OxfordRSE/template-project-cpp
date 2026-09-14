@@ -1,9 +1,9 @@
 # Template C++ Project
 
-[![codecov](https://codecov.io/gh/OxfordRSE/template-project-cpp/branch/master/graph/badge.svg)](https://codecov.io/gh/OxfordRSE/template-project-cpp)
-[![Build
-Status](https://travis-ci.org/OxfordRSE/template-project-cpp.svg?branch=master)](https://travis-ci.org/OxfordRSE/template-project-cpp)
-[![Build status](https://ci.appveyor.com/api/projects/status/5245a76r7ikhaass/branch/master?svg=true)](https://ci.appveyor.com/project/fcooper8472/template-project-cpp/branch/master)
+> [!WARNING]
+> This template is outdated and no longer maintained.
+> It relies on tooling (e.g. Travis CI) that is no longer recommended for new C++ projects.
+> There isn't a single de facto modern C++ project template, but [ssciwr/cookiecutter-cpp-project](https://github.com/ssciwr/cookiecutter-cpp-project) is one actively maintained option worth a look.
 
 ## Overview
 
